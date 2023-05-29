@@ -23,5 +23,5 @@ public class ModalTest extends BaseUiTest {
         String largeText = modalPage.largeModalText.getText();
         modalPage.largeModalText.shouldHave(Condition.exactText(largeText));
         modalPage.closeLargeModal.click();
-    }git
+    }
 }
