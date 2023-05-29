@@ -1,0 +1,1 @@
+{"uuid":"3bbe85c0-b6ec-4f14-8dd2-7ffc82f5a820","name":"search.TestTextBox.setUp","children":["2faea4d5-f71e-4c78-8eae-c60a4113817d"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1684571973521,"stop":1684571982760}],"afters":[],"start":1684571973521,"stop":1684571982761}

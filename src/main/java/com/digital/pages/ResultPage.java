@@ -1,0 +1,19 @@
+package com.digital.pages;
+
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
+
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$x;
+
+public class ResultPage extends BasePage{
+
+//    public ElementsCollection listsOfFood = $$x("//div[@class='cafe--name']");
+
+
+
+
+
+
+}

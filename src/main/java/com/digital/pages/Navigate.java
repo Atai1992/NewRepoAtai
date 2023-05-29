@@ -1,0 +1,132 @@
+package com.digital.pages;
+
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.Keys;
+
+import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.*;
+
+public class Navigate {
+    public SelenideElement elementMenu = $x("(//div[@class='card mt-4 top-card'])[1]");
+    public SelenideElement alertMenu = $x("(//div[@class='card mt-4 top-card'])[3]");
+    public SelenideElement textBoxMenu = $x("//span[text()='Text Box']");
+    public SelenideElement checkBoxMenu = $x("//span[text()='Check Box']");
+    public SelenideElement radioButtonMenu = $x("//span[text()='Radio Button']");
+    public SelenideElement webTablesMenu = $(byText("Web Tables"));
+    public SelenideElement buttonsMenu = $(byText("Buttons"));
+    public SelenideElement linksMenu = $(byText("Links"));
+    public SelenideElement brokenLinks_ImagesMenu = $(byText("Broken Links - Images"));
+    public SelenideElement upload_downloadMenu = $(byText("Upload and Download"));
+    public SelenideElement dynamicPropertiesMenu = $(byText("Dynamic Properties"));
+    public SelenideElement alertsFrameWindowsMenu = $x("(//span[@class='group-header'])[3]");
+    public SelenideElement browserWindowsMenu = $(byText("Browser Windows"));
+    public SelenideElement alertsMenu = $(byText("Alerts"));
+    public SelenideElement framesMenu = $(byText("Frames"));
+    public SelenideElement nestedFramesMenu = $(byText("Nested Frames"));
+    public SelenideElement ModalDialogsMenu = $(byText("Modal Dialogs"));
+
+
+
+    public Navigate goToTextBoxPage() {
+        elementMenu.click();
+        textBoxMenu.click();
+        return this;
+    }
+
+    public Navigate toCheckBoxPage() {
+        elementMenu.click();
+        checkBoxMenu.click();
+        return this;
+    }
+
+    public Navigate toRadioButtonPage() {
+        elementMenu.click();
+        radioButtonMenu.click();
+        return this;
+    }
+
+    public Navigate toWebTablesPage() {
+        elementMenu.click();
+        webTablesMenu.click();
+        return this;
+    }
+
+    public Navigate toLinksPage() {
+        elementMenu.click();
+        Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+        linksMenu.click();
+        return this;
+    }
+
+    public Navigate toButtonsPage() {
+        elementMenu.click();
+        buttonsMenu.click();
+        return this;
+    }
+
+    public Navigate toBrokenLinks_Images() {
+        elementMenu.click();
+        Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+        sleep(2000);
+        brokenLinks_ImagesMenu.click();
+        return this;
+    }
+
+    public Navigate toUpload_DownloadPage() {
+        elementMenu.click();
+        Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+        sleep(2000);
+        upload_downloadMenu.click();
+        return this;
+
+    }
+
+    public Navigate toDynamicPropertiesPage() {
+        elementMenu.click();
+        Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+        Selenide.sleep(2000);
+        dynamicPropertiesMenu.click();
+        return this;
+
+    }
+
+    public Navigate toBrowserWindowsPage() {
+        alertMenu.click();
+        Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+        Selenide.sleep(2000);
+        browserWindowsMenu.click();
+        return this;
+
+
+    }
+    public Navigate toAlertsPage() {
+        alertMenu.click();
+        alertsMenu.click();
+        return this;
+    }
+    public Navigate toFramePage(){
+        alertMenu.click();
+        Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+        sleep(2000);
+        framesMenu.click();
+        return this;
+
+    }
+    public Navigate toNestedFramesPage() {
+        alertMenu.click();
+        Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+        sleep(2000);
+        nestedFramesMenu.click();
+        return this;
+    }
+    public Navigate toModalDialogPage() {
+        alertMenu.click();
+        Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+        sleep(2000);
+        ModalDialogsMenu.click();
+        return this;
+    }
+
+}
